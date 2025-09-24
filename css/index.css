@@ -647,8 +647,12 @@ textarea:focus {
 
 /* ===== Responsive (mobile styles) ===== */
 @media (max-width: 900px) {
+
+  .hero__content {
+    padding: 100px 10px;
+  }
   .cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .split {
@@ -685,5 +689,10 @@ textarea:focus {
   .nav ul {
     flex-direction: column;
     padding: 12px;
+  }
+
+  .socials img.icon {
+    width: 35px !important;
+    height: 35px !important;
   }
 }
