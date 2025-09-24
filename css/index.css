@@ -168,6 +168,12 @@ h3 {
   border-radius: 8px;
 }
 
+.btn--submit {
+  padding: 12px 25px;
+  width: auto;
+  justify-self: start;
+}
+
 /* ===== Table styles ===== */
 .table-wrap {
   overflow: auto;

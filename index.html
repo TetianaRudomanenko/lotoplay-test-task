@@ -113,20 +113,20 @@
     <h2>Зв'язатись з нами</h2>
     <div class="grid-2">
       <!-- Contact form -->
-      <form class="form contact-form" id="contactForm" novalidate>
+      <form class="form contact-form" id="contactForm">
         <label>
           <span>Ім’я</span>
-          <input type="text" name="name" required>
+          <input type="text" name="name" required minlength="2" pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ'’ -]+" placeholder="Введіть своє ім’я">
         </label>
         <label>
           <span>Email</span>
-          <input type="email" name="email" required>
+          <input type="email" name="email" required placeholder="Введіть свій email">
         </label>
         <label class="full">
           <span>Повідомлення</span>
-          <textarea name="message" rows="5" placeholder="Напишіть своє повідомлення..."></textarea>
+          <textarea name="message" rows="5" required minlength="10" placeholder="Напишіть своє повідомлення..."></textarea>
         </label>
-        <button class="btn btn--primary" type="submit">Відправити</button>
+        <button class="btn btn--primary btn--submit" type="submit">Відправити</button>
       </form>
 
       <!-- Google Map -->
