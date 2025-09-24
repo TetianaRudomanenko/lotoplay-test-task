@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Гурт «Грім та Грім»</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+<!-- Header will be loaded here -->
+<div data-include="partials/header.html"></div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container hero__content">
+    <h1>Гурт «Грім та Грім»</h1>
+    <p class="lead">
+      Справжній український рок, нові тексти і шалену енергію сцени. Приєднуйся!
+    </p>
+    <a href="#concerts" class="btn btn--primary">Замовити квиток</a>
+  </div>
+</section>
+
+<!-- Concerts -->
+<section id="concerts" class="section">
+  <div class="container">
+    <h2>Найближчі концерти</h2>
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Місто / Заклад</th>
+          <th>К-сть місць</th>
+          <th>Дата і час</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Київ — Docker-G Pub</td>
+          <td>250</td>
+          <td>25.10.2025, 19:00</td>
+          <td><button class="btn btn--small js-ticket">Замовити квиток</button></td>
+        </tr>
+        <tr>
+          <td>Львів — !FESTrepublic</td>
+          <td>400</td>
+          <td>01.11.2025, 20:00</td>
+          <td><button class="btn btn--small js-ticket">Замовити квиток</button></td>
+        </tr>
+        <tr>
+          <td>Одеса — Зелений театр</td>
+          <td>700</td>
+          <td>09.11.2025, 19:30</td>
+          <td><button class="btn btn--small js-ticket">Замовити квиток</button></td>
+        </tr>
+        <tr>
+          <td>Харків — ArtZavod</td>
+          <td>500</td>
+          <td>16.11.2025, 19:00</td>
+          <td><button class="btn btn--small js-ticket">Замовити квиток</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Band members -->
+<section id="members" class="section">
+  <div class="container">
+    <h2>Учасники гурту</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="images/guitar.jpg" alt="Максим — гітара" />
+        <h3>Максим — гітара</h3>
+      </article>
+      <article class="card">
+        <img src="images/vocal.jpg" alt="Олена — вокал" />
+        <h3>Олена — вокал</h3>
+      </article>
+      <article class="card">
+        <img src="images/drums.jpg" alt="Тарас — барабани" />
+        <h3>Тарас — барабани</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- About / History -->
+<section id="about" class="section section--split">
+  <div class="container split">
+    <div class="split__text">
+      <h2>Наша історія</h2>
+      <p>«Грім та Грім» народився з бажання створювати музику, яка відгукується серцем... (текст скорочено)</p>
+      <p>Ми любимо експериментувати зі звуком, додаємо народні інструменти та драйв сцени.</p>
+    </div>
+    <figure class="split__media">
+      <img src="images/stage.jpg" alt="Виступ гурту на сцені">
+    </figure>
+  </div>
+</section>
+
+<!-- Contacts -->
+<section id="contacts" class="section">
+  <div class="container">
+    <h2>Зв'яжись з нами</h2>
+    <div class="grid-2">
+      <!-- Contact form -->
+      <form class="form contact-form" id="contactForm" novalidate>
+        <label>
+          <span>Ім’я</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label class="full">
+          <span>Повідомлення</span>
+          <textarea name="message" rows="5" placeholder="Розкажи про своє питання..."></textarea>
+        </label>
+        <button class="btn btn--primary" type="submit">Відправити</button>
+      </form>
+
+      <!-- Google Map -->
+      <div class="map-wrap">
+        <h3>Наше місцезнаходження</h3>
+        <iframe
+            title="Карта Києва"
+            class="map"
+            src="https://maps.google.com/maps?q=Kyiv&t=&z=12&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer will be loaded here -->
+<div data-include="partials/footer.html"></div>
+
+<!-- Modals will be loaded here -->
+<div data-include="partials/modals.html"></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
+
