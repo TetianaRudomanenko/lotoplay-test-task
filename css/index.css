@@ -19,8 +19,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100%;
 }
 
@@ -91,10 +90,14 @@ h3 {
   color: var(--text);
   text-decoration: none;
   opacity: .86;
+  transition: transform .25s ease, text-shadow .25s ease, opacity .25s ease;
 }
 
 .nav a:hover {
   opacity: 1;
+  transform: scale(1.1);
+  text-shadow: 0 0 6px rgba(242, 245, 248, 0.6),
+  0 0 12px rgba(242, 245, 248, 0.4);
 }
 
 /* Burger button (hidden by default, visible on mobile) */
@@ -307,7 +310,7 @@ h3 {
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 20px;
 }
 
 .form .full {
@@ -387,19 +390,44 @@ textarea:focus {
   display: inline-flex;
   align-items: center;
   gap: 3px;
+  transition: transform .25s ease, text-shadow .25s ease, opacity .25s ease, filter .25s ease;
 }
 
+.footer a:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  text-shadow: 0 0 6px rgba(201, 209, 224, 0.6),
+  0 0 12px rgba(201, 209, 224, 0.4);
+}
+
+/* для картинок внутри ссылок */
 .footer a img.icon {
   width: 16px;
   height: 16px;
   display: inline-block;
+  transition: filter .25s ease, transform .25s ease;
 }
 
+.footer a:hover img.icon {
+  filter: drop-shadow(0 0 6px rgba(201, 209, 224, 0.8))
+  drop-shadow(0 0 12px rgba(201, 209, 224, 0.6));
+  transform: scale(1.1);
+}
+
+/* соцсети побольше — тот же эффект */
 .socials img.icon {
   width: 45px !important;
-  height: 45px!important;
+  height: 45px !important;
   margin-left: 5px !important;
+  transition: filter .25s ease, transform .25s ease;
 }
+
+.socials a:hover img.icon {
+  filter: drop-shadow(0 0 8px rgba(201, 209, 224, 0.8))
+  drop-shadow(0 0 16px rgba(201, 209, 224, 0.6));
+  transform: scale(1.1);
+}
+
 
 /* ===== Modal ===== */
 .modal {
