@@ -87,20 +87,54 @@ function initModals() {
 }
 
 
-/* — Form validation / submission mock — */
+/* — Form validation / submission mock with GET requests — */
 function initForms() {
   const contact = document.getElementById('contactForm');
-  contact?.addEventListener('submit', (e) => {
+  contact?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    alert('Дякуємо! Ми зв’яжемось з вами.');
-    e.target.reset();
+    const form = e.target;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    try {
+      const res = await fetch(
+        `https://example.com/api/contact?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
+      );
+      if (res.ok) {
+        alert('Дякуємо! Ми зв’яжемось з вами.');
+        form.reset();
+      } else {
+        alert('Помилка при відправці форми.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Не вдалося відправити форму.');
+    }
   });
 
   const ticket = document.getElementById('ticketForm');
-  ticket?.addEventListener('submit', (e) => {
+  ticket?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    alert('Квиток заброньовано! Деталі відправлено на Email.');
-    document.querySelector('#ticketModal .modal__close')?.click();
-    e.target.reset();
+    const form = e.target;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+
+    try {
+      const res = await fetch(
+        `https://example.com/api/ticket?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`
+      );
+      if (res.ok) {
+        alert('Квиток заброньовано! Деталі відправлено на Email.');
+        document.querySelector('#ticketModal .modal__close')?.click();
+        form.reset();
+      } else {
+        alert('Помилка при бронюванні квитка.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Не вдалося відправити квиток.');
+    }
   });
 }
+
