@@ -3,17 +3,27 @@
   <div class="modal__dialog" role="document">
     <button class="modal__close" type="button" aria-label="Закрити" data-close-modal>×</button>
     <h3>Замовити квиток</h3>
-    
+
     <div id="ticketInfo" class="ticket-info"></div>
 
     <form class="form modal__form" id="ticketForm">
       <label>
         <span>Ваше ім’я</span>
-        <input type="text" name="name" required>
+        <input
+          type="text"
+          name="name"
+          required
+          minlength="2"
+          pattern="[A-Za-zА-Яа-яІіЇїЄєҐґ'’ -]+"
+          placeholder="Введіть своє ім’я">
       </label>
       <label>
         <span>Email</span>
-        <input type="email" name="email" required>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Введіть свій email">
       </label>
       <button class="btn btn--primary" type="submit">Відправити</button>
     </form>
