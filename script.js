@@ -48,9 +48,22 @@ function initBurger() {
 
 /* — Modals — */
 function initModals() {
-  // open ticket modal
+  const ticketInfo = document.getElementById('ticketInfo');
+
   document.querySelectorAll('.js-ticket').forEach(btn => {
-    btn.addEventListener('click', () => openModal('#ticketModal'));
+    btn.addEventListener('click', () => {
+      const city = btn.dataset.city;
+      const date = btn.dataset.date;
+
+      if (ticketInfo) {
+        ticketInfo.innerHTML = `
+          <p><strong>Місто / Заклад:</strong> ${city}</p>
+          <p><strong>Дата і час:</strong> ${date}</p>
+        `;
+      }
+
+      openModal('#ticketModal');
+    });
   });
 
   // delegate close actions
@@ -72,6 +85,7 @@ function initModals() {
     document.body.style.overflow = '';
   }
 }
+
 
 /* — Form validation / submission mock — */
 function initForms() {
