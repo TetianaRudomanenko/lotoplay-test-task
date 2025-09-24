@@ -120,7 +120,7 @@ h3 {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background: url('../images/hero.jpg') center/cover no-repeat;
+  background: url('../images/hero-section.jpeg') center/cover no-repeat;
   filter: brightness(.5);
   z-index: -1;
 }
@@ -224,29 +224,6 @@ h3 {
 
 .card h3 {
   padding: 14px;
-}
-
-/* ===== Split section (text + image) ===== */
-.section--split {
-  background: linear-gradient(180deg, rgba(255, 255, 255, .02), transparent);
-}
-
-.split {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 28px;
-  align-items: center;
-}
-
-.split__media img {
-  width: 100%;
-  border-radius: var(--radius);
-  display: block;
-  box-shadow: var(--shadow);
-}
-
-.split__text p {
-  color: var(--muted);
 }
 
 /* ===== Forms ===== */
