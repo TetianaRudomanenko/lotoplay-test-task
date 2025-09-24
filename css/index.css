@@ -310,16 +310,42 @@ textarea:focus {
   padding: 28px 0;
 }
 
-.footer__grid {
+.footer__flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 16px;
 }
 
+.footer p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 0 20px;
+}
+
+.footer p:last-child {
+  margin-bottom: 0;
+}
+
 .footer a {
   color: #c9d1e0;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.footer a img.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.socials img.icon {
+  width: 45px !important;
+  height: 45px!important;
+  margin-left: 5px !important;
 }
 
 /* ===== Modal ===== */
