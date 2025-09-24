@@ -183,9 +183,9 @@ h3 {
   border-radius: 10px;
   padding: 12px 18px;
   font-weight: 600;
-  cursor: pointer;
   text-decoration: none;
   transition: .25s box-shadow, .25s transform, .25s background-color, .25s color;
+  cursor: url('/images/rock.cur') 8 0, pointer;
 }
 
 .btn--primary {
