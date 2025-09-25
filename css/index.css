@@ -320,7 +320,7 @@ h3 {
 label {
   display: grid;
   gap: 6px;
-  font-size: 14px;
+  font-size: 16px;
   color: #c9d1e0;
 }
 
@@ -549,6 +549,7 @@ textarea:focus {
 .modal__form {
   display: grid;
   gap: 12px;
+  font-size: 16px;
 }
 
 .modal__form label {
@@ -557,7 +558,6 @@ textarea:focus {
 }
 
 .modal__form span {
-  font-size: 13px;
   opacity: .9;
 }
 
